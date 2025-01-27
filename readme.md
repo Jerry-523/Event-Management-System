@@ -34,7 +34,7 @@ mutation {
     title: "Workshop de Inovação",
     category: "Inovação",
     date: "2025-02-20",
-    location: "São Paulo",
+    location: "São Vicente",
     description: "Um evento para explorar ideias inovadoras.",
     capacity: 100,
     status: "ativo"
