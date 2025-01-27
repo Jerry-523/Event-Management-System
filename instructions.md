@@ -1,6 +1,5 @@
-
-
 ### 1. **Criar um Evento (Create Event)**
+
 Esta query cria um novo evento com todos os dados necessários.
 
 ```graphql
@@ -27,6 +26,7 @@ mutation {
 ```
 
 ### 2. **Obter todos os Eventos (Get All Events)**
+
 Esta query busca todos os eventos cadastrados no sistema.
 
 ```graphql
@@ -45,6 +45,7 @@ query {
 ```
 
 ### 3. **Criar um Participante (Create Participant)**
+
 Esta mutação cria um novo participante, incluindo seus interesses.
 
 ```graphql
@@ -63,6 +64,7 @@ mutation {
 ```
 
 ### 4. **Obter todos os Participantes (Get All Participants)**
+
 Esta query busca todos os participantes cadastrados.
 
 ```graphql
@@ -77,6 +79,7 @@ query {
 ```
 
 ### 5. **Criar uma Sessão para um Evento (Create Session)**
+
 Esta mutação cria uma sessão para um evento específico, associando o `eventId`.
 
 ```graphql
@@ -95,6 +98,7 @@ mutation {
 ```
 
 ### 6. **Obter todas as Sessões de um Evento (Get Sessions by Event)**
+
 Esta query retorna todas as sessões associadas a um evento específico.
 
 ```graphql
@@ -112,6 +116,7 @@ query {
 ```
 
 ### 7. **Criar um Feedback para um Evento (Create Feedback)**
+
 Esta mutação permite enviar um feedback para um evento específico, incluindo um comentário e uma pontuação.
 
 ```graphql
@@ -130,6 +135,7 @@ mutation {
 ```
 
 ### 8. **Obter Feedbacks de um Evento (Get Feedbacks by Event)**
+
 Esta query retorna todos os feedbacks associados a um evento específico.
 
 ```graphql
@@ -147,6 +153,7 @@ query {
 ```
 
 ### 9. **Atualizar os Dados de um Evento (Update Event)**
+
 Esta mutação permite atualizar um evento existente, modificando seus detalhes.
 
 ```graphql
@@ -173,6 +180,7 @@ mutation {
 ```
 
 ### 10. **Excluir um Participante (Delete Participant)**
+
 Esta mutação remove um participante do sistema.
 
 ```graphql
@@ -186,6 +194,7 @@ mutation {
 ```
 
 ### 11. **Excluir um Evento (Delete Event)**
+
 Esta mutação exclui um evento do sistema.
 
 ```graphql
@@ -198,6 +207,7 @@ mutation {
 ```
 
 ### 12. **Testar Relacionamento entre Evento e Participantes**
+
 Você pode testar a relação entre eventos e participantes, verificando os participantes de um evento específico:
 
 ```graphql
@@ -210,6 +220,25 @@ query {
       name
       email
     }
+  }
+}
+```
+
+### 13. **Criar uma Pergunta**
+```graphql
+mutation {
+  createQuestion(input: {
+    content
+
+: "What are the keynote speakers?"
+    participantId: 1
+    eventId: 1
+  }) {
+    id
+    content
+    participantId
+    eventId
+    status
   }
 }
 ```
