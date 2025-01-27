@@ -24,3 +24,4 @@ const participantSchema = gql`
 `;
 
 module.exports = participantSchema;
+
