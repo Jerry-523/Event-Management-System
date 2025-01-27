@@ -94,13 +94,17 @@ mutation {
    ```bash
    npm install
    ```
+   or
+   ```bash
+   npm install apollo-server graphql sequelize sqlite3
+   ```
 
-3. Inicie o servidor:
+4. Inicie o servidor:
    ```bash
    npm start
    ```
 
-4. Acesse o playground GraphQL em: `http://localhost:4000/graphql`.
+5. Acesse o playground GraphQL em: `http://localhost:4000/graphql`.
 
 ---
 
