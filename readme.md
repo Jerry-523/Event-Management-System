@@ -94,7 +94,7 @@ mutation {
    ```bash
    npm install
    ```
-   or
+   ou
    ```bash
    npm install apollo-server graphql sequelize sqlite3
    ```
