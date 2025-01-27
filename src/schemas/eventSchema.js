@@ -22,12 +22,25 @@ const eventSchema = gql`
     status: String!
   }
 
+  input UpdateEventInput {
+    title: String
+    category: String
+    date: String
+    location: String
+    description: String
+    capacity: Int
+    status: String
+  }
+
   type Query {
     events: [Event!]!
+    event(id: ID!): Event
   }
 
   type Mutation {
     createEvent(input: EventInput!): Event!
+    updateEvent(id: ID!, input: UpdateEventInput!): Event!
+    deleteEvent(id: ID!): Event!
   }
 `;
 

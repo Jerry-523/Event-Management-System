@@ -14,14 +14,24 @@ const participantSchema = gql`
     interests: [String]!
   }
 
+  input UpdateParticipantInput {
+    name: String
+    email: String
+    interests: [String]
+  }
+
   type Query {
     participants: [Participant!]!
+    participant(id: ID!): Participant
   }
 
   type Mutation {
     createParticipant(input: ParticipantInput!): Participant!
+    updateParticipant(id: ID!, input: UpdateParticipantInput!): Participant!
+    deleteParticipant(id: ID!): Participant!
   }
 `;
 
 module.exports = participantSchema;
+
 
